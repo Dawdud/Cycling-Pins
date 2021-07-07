@@ -74,7 +74,7 @@ function SignIn() {
             <Paper className={classes.paper}>
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
-                        <h1 >Sign In</h1>
+                        <h1 data-testid="header-login" >Sign In</h1>
                     </Grid>
 
                     {error !== null && <div className="py-4 bg-red-600 w-full text-white text-center mb-3">{error}</div>}
@@ -87,9 +87,11 @@ function SignIn() {
                             name="userEmail"
                             label="email:"
                             value={email}
+                            data-testid="userEmail"
                             variant="outlined"
                             placeholder="Your email"
                             id="userEmail"
+
                             onChange={(event) => onChangeHandler(event)}
                         />
                     </Grid>
@@ -104,6 +106,7 @@ function SignIn() {
                             fullWidth
                             placeholder="Your Password"
                             id="userPassword"
+                            data-testid="userPassword"
                             onChange={(event) => onChangeHandler(event)}
                         />
                     </Grid>
